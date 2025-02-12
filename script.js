@@ -3,3 +3,4 @@ cookieStore.addEventListener("change", (event) => {
 });
 
 document.cookies = "merp=123";
+print("done")
