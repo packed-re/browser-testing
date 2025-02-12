@@ -1,3 +1,5 @@
+print = console.log; // im over it
+
 cookieStore.addEventListener("change", (event) => {
 	console.log(event);
 });
