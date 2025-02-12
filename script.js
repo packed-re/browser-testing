@@ -2,5 +2,5 @@ cookieStore.addEventListener("change", (event) => {
 	console.log(event);
 });
 
-document.cookies = "merp=123";
+document.cookie = "merp=123";
 print("done")
