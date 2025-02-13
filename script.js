@@ -11,9 +11,12 @@ document.cookie = "merp=mainPath";
 document.cookie = "merp=diffPath; path=/merpington";
 document.cookie = "merp=diffDomain; domain=github.io";
 
+localStorage.removeItem("lsKey");
+sessionStorage.removeItem("ssKey");
+
 document.addEventListener("storage", function(event)
 {
-	print(event);
+	print("storage event", event);
 })
 
 localStorage.setItem("lsKey", "lsVal");
