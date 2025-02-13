@@ -14,11 +14,12 @@ document.cookie = "merp=diffDomain; domain=github.io";
 localStorage.removeItem("lsKey");
 sessionStorage.removeItem("ssKey");
 
-document.addEventListener("storage", function(event)
+window.addEventListener("storage", function(event)
 {
 	print("storage event", event);
 })
 
+localStorage.setItem("lsKey", "lsVal");
 localStorage.setItem("lsKey", "lsVal");
 sessionStorage.setItem("ssKey", "ssVal");
 
