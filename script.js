@@ -10,4 +10,13 @@ else
 document.cookie = "merp=mainPath";
 document.cookie = "merp=diffPath; path=/merpington";
 document.cookie = "merp=diffDomain; domain=github.io";
+
+document.addEventListener("storage", function(event)
+{
+	print(event);
+})
+
+localStorage.setItem("lsKey", "lsVal");
+sessionStorage.setItem("ssKey", "ssVal");
+
 print("done");
