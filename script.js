@@ -7,20 +7,22 @@ if(window.cookieStore !== undefined)
 else
 	print("cookieStore doesnt exist (firefox moment)");
 
-document.cookie = "merp=mainPath";
-document.cookie = "merp=diffPath; path=/merpington";
-document.cookie = "merp=diffDomain; domain=github.io";
+setTimeout(() => {
+	document.cookie = "merp=mainPath";
+	document.cookie = "merp=diffPath; path=/merpington";
+	document.cookie = "merp=diffDomain; domain=github.io";
 
-localStorage.removeItem("lsKey");
-sessionStorage.removeItem("ssKey");
+	localStorage.removeItem("lsKey");
+	sessionStorage.removeItem("ssKey");
 
-window.addEventListener("storage", function(event)
-{
-	print("storage event", event);
-})
+	window.addEventListener("storage", function(event)
+	{
+		print("storage event", event);
+	})
 
-localStorage.setItem("lsKey", "lsVal");
-localStorage.setItem("lsKey", "lsVal");
-sessionStorage.setItem("ssKey", "ssVal");
-
+	localStorage.setItem("lsKey", "lsVal");
+	localStorage.setItem("lsKey", "lsVal");
+	sessionStorage.setItem("ssKey", "ssVal");
+		print("timeout done")
+}, timeout);
 print("done");
