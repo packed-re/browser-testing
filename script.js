@@ -24,5 +24,5 @@ setTimeout(() => {
 	localStorage.setItem("lsKey", "lsVal");
 	sessionStorage.setItem("ssKey", "ssVal");
 		print("timeout done")
-}, timeout);
+}, 500);
 print("done");
