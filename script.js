@@ -1,6 +1,6 @@
 print = console.log; // im over it
 
-if(cookieStore !== undefined)
+if(window.cookieStore !== undefined)
 	cookieStore.addEventListener("change", (event) => {
 		print(event);
 	});
